@@ -1,4 +1,4 @@
-# Mac-Tools
+NetSpeed Monitor {MacOS Only}
 
 Collection of lightweight, native tools and menu bar utilities built for macOS.
 
