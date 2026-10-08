@@ -1,0 +1,9 @@
+# Compiled binaries & object files
+netspeed
+*.o
+
+# Local user history data
+history.json
+
+# macOS metadata
+.DS_Store
