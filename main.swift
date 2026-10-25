@@ -99,14 +99,24 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
         menu.addItem(NSMenuItem.separator())
 
-        // 3. Last 7 Days History (sorted chronologically)
-        let sortedKeys = history.days.keys.sorted()
-        let last7Keys = sortedKeys.suffix(7)
+        // 3. Last 7 Days History (newest first, today marked as 'Today')
+        let todayKey = keyFormatter.string(from: Date())
+        if history.days[todayKey] == nil {
+            history.days[todayKey] = DayUsage(rx: 0, tx: 0)
+        }
 
-        for key in last7Keys {
+        let sortedKeys = history.days.keys.sorted(by: >)
+        let recentKeys = sortedKeys.prefix(7)
+
+        for key in recentKeys {
             guard let usage = history.days[key] else { continue }
-            let date = keyFormatter.date(from: key) ?? Date()
-            let dateStr = displayDateFormatter.string(from: date).uppercased()
+            let dateStr: String
+            if key == todayKey {
+                dateStr = "Today"
+            } else {
+                let date = keyFormatter.date(from: key) ?? Date()
+                dateStr = displayDateFormatter.string(from: date).uppercased()
+            }
             let rxStr = formatDataSize(usage.rx)
             let txStr = formatDataSize(usage.tx)
 

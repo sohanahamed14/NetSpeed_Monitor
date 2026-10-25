@@ -14,9 +14,9 @@ A lightweight, real-time network speed and data usage monitor in your macOS menu
  │ Download: 0.0 MB/s  |  Upload: 0.0 MB/s      │
  │ Session:  ↓ 67.4 MB    ↑ 118.8 MB            │
  ├──────────────────────────────────────────────┤
- │ 7 OCT     ↓ 1.0 GB     ↑ 5.7 GB              │
+ │ Today     ↓ 67.3 MB    ↑ 118.8 MB            │
  │ 8 OCT     ↓ 530 KB     ↑ 245 KB              │
- │ 9 OCT     ↓ 67.3 MB    ↑ 118.8 MB            │
+ │ 7 OCT     ↓ 1.0 GB     ↑ 5.7 GB              │
  ├──────────────────────────────────────────────┤
  │ Last 7 days    ↓ 1.1 GB   ↑ 5.8 GB           │
  │ Last 30 days   ↓ 1.1 GB   ↑ 5.8 GB           │
